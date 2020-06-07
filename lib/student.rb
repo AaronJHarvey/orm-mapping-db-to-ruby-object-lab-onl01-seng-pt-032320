@@ -21,9 +21,7 @@ class Student
     
     DB[:conn].execut(sql, name).each do |row|
       self.new_from_db(row)
-    end
-  end
-      
+    end.first
   end
   
   def save
