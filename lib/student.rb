@@ -102,7 +102,7 @@ end
       SELECT * 
       FROM students 
       WHERE grade = 10 
-      ORDER BY stedents.id
+      ORDER BY students.id
       LIMIT 1
     SQL
     
