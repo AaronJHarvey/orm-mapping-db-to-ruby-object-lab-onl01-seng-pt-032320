@@ -111,9 +111,12 @@ end
     end.first
   end
   
-  def self.all_students_in_grade_X
+  def self.all_students_in_grade_X(grade)
     sql = <<-SQL
-      SELECT
+      SELECT *
+      FROM students
+      WHERE grade = ?
+      ORDER BY students.id 
     SQL
   end
 end
