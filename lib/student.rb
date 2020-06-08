@@ -92,7 +92,9 @@ end
       LIMIT ?
     SQL
     
-    DB[:conn](sql,number).execute
+    DB[:conn].execute(sql,number).each do |row|
+      self.new_from_db(row)
+    end
     
   end
 end
