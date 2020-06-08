@@ -111,5 +111,9 @@ end
     end.first
   end
   
-  def self.
+  def self.all_students_in_grade_X
+    sql = <<-SQL
+      SELECT
+    SQL
+  end
 end
